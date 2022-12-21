@@ -5,7 +5,7 @@ import shutil
 import numpy as np
 from time import time
 import torch.nn.functional as F
-from kernal import togray,laplacian,gridImg,gaussion,conv2d
+from kernel import togray,laplacian,gridImg,gaussion,conv2d
 
 def lap_det(img,r=11,c=7):
     h,w = img.shape[:2]
