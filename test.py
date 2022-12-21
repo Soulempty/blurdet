@@ -33,6 +33,7 @@ def lap_det(img,r=11,c=7):
     
 def get_blur(img_path,save_path="blur"):
     fs = os.listdir(img_path)
+    os.makedirs(save_path,exist_ok=True)
     for f in fs:
         path = os.path.join(img_path,f)
         img = cv2.imread(path)
@@ -44,6 +45,6 @@ def get_blur(img_path,save_path="blur"):
             shutil.move(path,os.path.join(save_path,f))
             
 if __name__ == "__main__":
-    img_path = "images"
+    img_path = "data"
     save_path = "blur"
     get_blur(img_path,save_path)
